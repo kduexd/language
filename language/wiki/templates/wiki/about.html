@@ -1,0 +1,7 @@
+{% extends "main/base.html" %}
+{% load staticfiles %}
+{% block heading %}關於{% endblock %}
+{% block content %}
+<p>我們提供許多程式語言的相關知識,歡迎瀏覽</p>
+<a href={% url 'main:main' %}>回首页</a>
+{% endblock %}

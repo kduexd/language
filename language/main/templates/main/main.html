@@ -1,0 +1,8 @@
+{% extends "main/base.html" %}
+{% block heading %}首頁{% endblock %}
+{% block content %}
+<p>{{message}}</p>
+<p>現在時間：<span style=color:red;>{{now}}</span></p>
+<p><a href={% url 'wiki:about' %}>about</a>
+<p><a href={% url 'wiki:wiki' %}>wiki</a>
+{% endblock %}
