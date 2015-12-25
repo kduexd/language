@@ -6,5 +6,7 @@ class UserProfile(models.Model):
     fullName = models.CharField(max_length=128)
     website = models.URLField(blank=True)
     address = models.CharField(max_length=128, blank=True)
+    
+    
 def __str__(self):
     return self.fullNname + '(' + self.user.username + ')'
