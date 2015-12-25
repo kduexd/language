@@ -2,7 +2,13 @@
 {% block heading %}首頁{% endblock %}
 {% block content %}
 <p>{{message}}</p>
+{% if messages %}
+{% for message in messages %}
+<p {% if message.tags %} class={{message.tags}} {% endif %}>{{message}}</p>
+{% endfor %}
+{% endif %}
 <p>現在時間：<span style=color:red;>{{now}}</span></p>
 <p><a href={% url 'wiki:about' %}>about</a>
 <p><a href={% url 'wiki:wiki' %}>wiki</a>
+<p><a href={% url 'account:register' %}>註冊</a></p>
 {% endblock %}
